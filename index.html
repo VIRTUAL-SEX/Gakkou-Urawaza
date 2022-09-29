@@ -1,22 +1,58 @@
 <html>
-<head>
-<title>学校のPC・ipad裏技まとめ！</title>
-</head>
-<body>
-<h1>Level1:よく対策されているが便利な物</h1>
-<p>1.Nitter,Piped</p>
-<p>Nitterは広告なしでTwitterを見れるサイトです。サイト自体が軽く、UIも分かり易いためおすすめです。</p>
-<p>PipedはNitterと運営者が同じのYouTubeを見れるサイトです。</p>
-<p>2.VPNBOOK</p>
-<p>VPNBOOKはFreeproxyを運営しています。FreeProxyは<strong>ほぼ全てのサイトが閲覧可能です。</strong>
-<h1>Level2:たまに対策されている物</h1>
-<p>1.via.hypothes.is</p>
-<p>このサイトはFreeProxyと同じようにサイトを閲覧することが出来ます。Scratchも閲覧できますがログインするとアカウントが使えなくなってしまうので注意です。</p>
-<p>2.Wayback Machine
-<p>サイトの状態を保存できるサイトです。（通称魚拓）こちらも他のユーザーに保存されていれば、ほとんどのサイトが閲覧可能です。
-<h1>Level3:滅多に対策されていない物</h1>
-<p>1.DuckDuckGO</p>
-<p>DuckDuckGOはユーザーのプライバシーを一切保存しない検索エンジンとして有名です。DuckDuckGOでは「検索したいYouTubeの動画のタイトル」を入力後、検索ボックスの下のバーにある動画を押せば、DuckDuckGO上でYouTubeの動画を視聴可能です。しかも閲覧履歴に残りにくいのでPipedガブロックされていた場合におすすめです。</p>
 
 </body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+<body>
+  <form action="test.html" method="post" enctype="multipart/form-data" >
+    <input type="file" name="test" onchange="previewFile(this);">
+    <input type="submit" value="送信する">
+  </form>
+  <p>プレビュー</p>
+  <img id="preview">
+ 
+  <script>
+  function previewFile(hoge){
+    var fileData = new FileReader();
+    fileData.onload = (function() {
+      //id属性が付与されているimgタグのsrc属性に、fileReaderで取得した値の結果を入力することで
+      //プレビュー表示している
+      document.getElementById('preview').src = fileData.result;
+    });
+    fileData.readAsDataURL(hoge.files[0]);
+  }
+  </script>
+  </body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+<body>
+  <form action="test.html" method="post" enctype="multipart/form-data" >
+    <input type="file" name="test" onchange="previewFile(this);">
+    <input type="submit" value="送信する">
+  </form>
+  <p>プレビュー</p>
+  <img id="preview">
+ 
+  <script>
+  function previewFile(hoge){
+    var fileData = new FileReader();
+    fileData.onload = (function() {
+      //id属性が付与されているimgタグのsrc属性に、fileReaderで取得した値の結果を入力することで
+      //プレビュー表示している
+      document.getElementById('preview').src = fileData.result;
+    });
+    fileData.readAsDataURL(hoge.files[0]);
+  }
+  </script>
+  </body>
 </html>
